@@ -22,7 +22,7 @@ def GetEfficiency(remaining_balance):
 print("Welcome to B.E.A.T — Budget Efficiency Assessment Tool!")
 print()
   
-# Input: weekly allowance
+#Input: weekly allowance
 while True:
     print("Enter your weekly allowance:")
     weekly_allowance = float(input("> "))
@@ -58,3 +58,8 @@ elif efficiency == "Balanced":
   print("Good job! You are spending your allowance well, keep monitoring your expenses.")
 else:
   print("Oh no! You are overspending. Please review your expenses and try to save more.")
+
+#Output: thank you
+print()
+print("----------")
+print("Thank you for using B.E.A.T — save a little, smile a lot. Ingat! ")
