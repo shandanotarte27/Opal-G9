@@ -23,10 +23,12 @@ print("Welcome to B.E.A.T — Budget Efficiency Assessment Tool!")
 print()
   
 # Input: weekly allowance
-print("Enter your weekly allowance:")
-weekly_allowance = float(input("> "))
-if weekly_allowance <= 0:
-  print("Invalid input. Please enter a positive amount.")
+while True:
+    print("Enter your weekly allowance:")
+    weekly_allowance = float(input("> "))
+    if weekly_allowance > 0:
+        break
+    print("Invalid input. Please enter a positive amount.")
 print()
  
 # Input: expenses
