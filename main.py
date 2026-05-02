@@ -32,13 +32,11 @@ while True:
 print()
  
 # Input: expenses
-transport_expense = GetExpense("transport")
-food_expense = GetExpense("food")
-personal_expense = GetExpense("personal")
-school_expense = GetExpense("school")
+categories = ["transport", "food", "personal", "school"]
+expenses = [Getexpense(cat) for cat in categories]
 
 # Calculations
-total_expense = transport_expense + food_expense + personal_expense + school_expense
+total_expense = sum(expenses)
 remaining_balance = weekly_allowance - total_expense
 efficiency = GetEfficiency(remaining_balance)
  
