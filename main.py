@@ -33,7 +33,7 @@ print()
  
 # Input: expenses
 categories = ["transport", "food", "personal", "school"]
-expenses = [Getexpense(cat) for cat in categories]
+expenses = [GetExpense(cat) for cat in categories]
 
 # Calculations
 total_expense = sum(expenses)
