@@ -4,14 +4,14 @@
 
 def GetExpense(category):
   while True:
-        print(f"Enter {category} expense:")
+        print(f"Enter {category} expense:") 
         value = float(input("> "))
-        if value >= 0:
+        if value >= 0: #Checking if amount is valid or not
             return value
-        print("Invalid input. Please enter a positive amount.")
+        print("Invalid input. Please enter a positive amount.") 
 
 def GetEfficiency(remaining_balance):
-    if remaining_balance > 0:
+    if remaining_balance > 0: #Starting of efficiency checking
         return "Efficient"
     elif remaining_balance == 0:
         return "Balanced"
@@ -25,31 +25,31 @@ print()
 #Input: weekly allowance
 while True:
     print("Enter your weekly allowance:")
-    weekly_allowance = float(input("> "))
+    weekly_allowance = float(input("> ")) #Enter weekly allowance
     if weekly_allowance > 0:
         break
     print("Invalid input. Please enter a positive amount.")
 print()
  
 # Input: expenses
-categories = ["transport", "food", "personal", "school"]
+categories = ["transport", "food", "personal", "school"] #Enter weekly expenses
 expenses = [GetExpense(cat) for cat in categories]
 
 # Calculations
-total_expense = sum(expenses)
-remaining_balance = weekly_allowance - total_expense
+total_expense = sum(expenses) 
+remaining_balance = weekly_allowance - total_expense #Calculates everything
 efficiency = GetEfficiency(remaining_balance)
  
 # Output: summary
 print()
-print("----- FINANCIAL SUMMARY -----")
+print("----- FINANCIAL SUMMARY -----") #Where it shows the total expenses, reamaining balance, and efficiency
 print(f"Total Expenses:          PHP{total_expense:.2f}")
 print(f"Remaining Balance:       PHP{remaining_balance:.2f}")
 print(f"Budget Efficiency Result: {efficiency}")
  
 # Output: feedback
 print()
-print("----- FEEDBACK -----")
+print("----- FEEDBACK -----") #Where it gives efficiency feedback
 if efficiency == "Efficient":
   print("Well done! You are managing your allowance well, keep it up!")
 elif efficiency == "Balanced":
@@ -60,4 +60,4 @@ else:
 #Output: thank you
 print()
 print("----------")
-print("Thank you for using B.E.A.T — save a little, smile a lot. Ingat! ")
+print("Thank you for using B.E.A.T — save a little, smile a lot. Ingat! ") #Thank you message shown after everything has run
